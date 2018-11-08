@@ -19,6 +19,10 @@
 		DD08B8652192F942006628BA /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08B8642192F942006628BA /* LoginUser.swift */; };
 		DD08B8682192FD80006628BA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08B8672192FD80006628BA /* ServiceManager.swift */; };
 		DD08B86B2193039C006628BA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD08B86A2193039C006628BA /* Constant.swift */; };
+		DD0ABD1D2193DEFE00E15849 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0ABD1C2193DEFE00E15849 /* RegistrationVC.swift */; };
+		DD0ABD1F2193DF1200E15849 /* RegistrationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0ABD1E2193DF1200E15849 /* RegistrationVM.swift */; };
+		DD0ABD212193E25400E15849 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0ABD202193E25400E15849 /* Enums.swift */; };
+		DD0ABD232193E76800E15849 /* SharedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0ABD222193E76800E15849 /* SharedClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		DD08B8642192F942006628BA /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
 		DD08B8672192FD80006628BA /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		DD08B86A2193039C006628BA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DD0ABD1C2193DEFE00E15849 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		DD0ABD1E2193DF1200E15849 /* RegistrationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVM.swift; sourceTree = "<group>"; };
+		DD0ABD202193E25400E15849 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		DD0ABD222193E76800E15849 /* SharedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,7 @@
 		DD08B8502192F57D006628BA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DD0ABD1B2193DEDA00E15849 /* RegistrationModule */,
 				DD08B8582192F5CA006628BA /* LoginModule */,
 			);
 			path = ViewController;
@@ -200,8 +209,19 @@
 			isa = PBXGroup;
 			children = (
 				DD08B86A2193039C006628BA /* Constant.swift */,
+				DD0ABD202193E25400E15849 /* Enums.swift */,
+				DD0ABD222193E76800E15849 /* SharedClass.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		DD0ABD1B2193DEDA00E15849 /* RegistrationModule */ = {
+			isa = PBXGroup;
+			children = (
+				DD0ABD1C2193DEFE00E15849 /* RegistrationVC.swift */,
+				DD0ABD1E2193DF1200E15849 /* RegistrationVM.swift */,
+			);
+			path = RegistrationModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,11 +357,15 @@
 			files = (
 				DD08B86B2193039C006628BA /* Constant.swift in Sources */,
 				DD08B8632192F8C5006628BA /* LoginVM.swift in Sources */,
+				DD0ABD212193E25400E15849 /* Enums.swift in Sources */,
 				DD08B8652192F942006628BA /* LoginUser.swift in Sources */,
+				DD0ABD232193E76800E15849 /* SharedClass.swift in Sources */,
+				DD0ABD1D2193DEFE00E15849 /* RegistrationVC.swift in Sources */,
 				DD08B8622192F8C5006628BA /* LoginVC.swift in Sources */,
 				DD08B8562192F57D006628BA /* AppDelegate.swift in Sources */,
 				DD08B8552192F57D006628BA /* MVVM_UnitTesting.xcdatamodeld in Sources */,
 				DD08B8682192FD80006628BA /* ServiceManager.swift in Sources */,
+				DD0ABD1F2193DF1200E15849 /* RegistrationVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

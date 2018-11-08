@@ -10,26 +10,28 @@ import Foundation
 
 protocol LoginProtocol {
     func success(loggedInUser: User)
+    func failure(error: Error)
 }
 
 class LoginVM {
     
     var loggedInUser : User?
-    
     var delegate: LoginProtocol?
     
-    // Dependency Injection (DI)
+    // 1. Dependency Injection (DI); 2.Following snippets give you two constructers one with User object and on without User object
     init(loggedInUser:User? = nil) {
         self.loggedInUser = loggedInUser
     }
     
-    func goLoginUser(userForLogin:User)  {
-        self.loggedInUser = userForLogin
+    func goLoginUser()  {
         
         ServiceManager.defaultManager().login(userForLogin: self.loggedInUser!) { (token, error) in
-            userForLogin.strToken = token
-            self.delegate?.success(loggedInUser: self.loggedInUser!)
+            if error != nil{
+                self.loggedInUser?.strToken = token
+                self.delegate?.success(loggedInUser: self.loggedInUser!)
+            }else{
+                self.delegate?.failure(error: error!)
+            }
         }
-        
     }
 }

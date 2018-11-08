@@ -8,5 +8,11 @@
 
 import Foundation
 
-let baseUrl = "https://reqres.in/api/"
-var loginMethod = "login"
+//Mark: API strings
+var LOGINMETHOD = "login"
+var REGISTRATIONMETHOD = "register"
+
+let POST = "POST"
+
+let EMAIL = "email"
+let PASSWORD = "password"

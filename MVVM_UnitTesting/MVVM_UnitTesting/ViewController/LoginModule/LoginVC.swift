@@ -28,11 +28,16 @@ class LoginVC: UIViewController,LoginProtocol {
 
     @IBAction func loginButtonPressed(_ sender: Any) {
         let objUser = User(strEmail: txtEmailId.text!, strPassword: txtPassword.text!, strToken: nil)
-        loginVM.goLoginUser(userForLogin: objUser)
+        loginVM.loggedInUser = objUser
+        loginVM.goLoginUser()
     }
     
+    //MARK: LoginVM delegate methods
     func success(loggedInUser: User) {
         print(loggedInUser.strToken ?? "")
+    }
+    func failure(error: Error) {
+        
     }
 }
 
